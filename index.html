@@ -5,77 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Font (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    
     <title>Justin's Portfolio</title>
-
-<style>
-/*Create the background color for website*/
-</style> 
-
 </head>
 <body class="bg-custom">
-
-
-
 <!--Nav bar-->
 <header>
-  <nav class="navbar navbar-expand mt-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-custom mt-3">
     <div class="container-fluid">
-      <div class="navbar-collapse justify-content-center" id="mynavbar">
-        <ul class="navbar-nav text-end">
+ 
+       <!-- Toggler/collapsible button for mobile -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse justify-content-lg-center justify-content-end" id="mynavbar">
+        <ul class="navbar-nav">
           <li class="nav-item me-md-3">
-            <a class="nav-link" style="font-size: clamp(.7rem, 2.5vw, 1.3rem);" href="#aboutMe">About Me</a>
+            <a class="nav-link" style="font-size:1.5rem" href="#aboutMe">About Me</a>
           </li>
           <li class="nav-item me-md-3">
-            <a class="nav-link" style="font-size: clamp(.7rem, 2.5vw, 1.3rem);" href="#portfolio">Projects</a>
+            <a class="nav-link" style="font-size:1.5rem" href="#portfolio">Projects</a>
           </li>
           <li class="nav-item me-md-3">
-            <a class="nav-link" style="font-size: clamp(.7rem, 2.5vw, 1.3rem);" href="#Skills-and-Experience">Skills & Experience</a>
+            <a class="nav-link" style="font-size:1.5rem" href="#Skills-and-Experience">Skills & Experience</a>
           </li>
           <li class="nav-item me-md-3">
-            <a class="nav-link" style="font-size: clamp(.7rem, 2.5vw, 1.3rem);" href="Documents/Justin_Resume.pdf" target="_blank">Resume</a>
+            <a class="nav-link" style="font-size:1.5rem" href="Documents/Justin-Resume-2024.pdf" target="_blank">Resume</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
-
 <!--Nav Bar Ending-->
 
 <!--First Page Text, buttons, and Picture-->
-<div class="container-fluid custom-container-pgOne mt-4 pt-0">
+<section class="container-fluid custom-container-pgOne mt-4 pt-0">
   <div class="row">
-    <div class="first-page-text col-sm-8 offset-sm-2 col-md-10 col-lg-5 mt-lg-5 pt-lg-5 offset-md-1 " style="height: auto;">
-      <h3 class="colored-sentence mt-5" style="display: inline-block; text-align: left; font-size: clamp(2rem, 3.5vw, 5rem);">
-        Hi! I'm <span class="colored-word">Justin Morgan</span>, a Software Engineer
-      </h3>
-      <p class="colored-words" style="font-size: clamp(1.3rem, 2vw, 1.2rem);">
-        Passionate about technology and driven to innovate. Committed to transforming complex problems into elegant solutions
-      </p>
-      <div class="Lets_talk_main" style="font-size: clamp(1.3rem, 2vw, 1.2rem); margin-top: 3rem;">
-        <a class="button" href="mailto:justincodeemail@gmail.com">Let's Talk</a>
-        <a class="PgButton" href="#portfolio">View My Projects</a>
+    <!-- Text Section -->
+    <header class="first-page-text col-sm-8 offset-sm-2 col-md-10 col-lg-5 mt-lg-5 pt-lg-5 offset-md-1" style="height: auto;">
+      <div class="pt-lg-5">
+        <h3 class="colored-sentence" style="font-weight: bold;">
+          Hi! I'm <span class="colored-word">Justin Morgan</span><br>A Software Engineer
+        </h3>
+        <p class="colored-words">
+          Committed to transforming complex problems<br>into elegant solutions.
+        </p>
+
+        <ul class="Lets_talk_main d-flex gap-3" style="list-style: none;">
+          <li><a class="button" href="mailto:justincodeemail@gmail.com">Let's Talk</a></li>
+          <li><a class="PgButton" href="#portfolio">View My Projects</a></li>
+          <li class="aws_badge d-none d-md-block">
+            <a href="https://www.credly.com/badges/a05ec77d-e6ca-46e9-835b-7cd02596070c/public_url" target="_blank">
+              <img src="picture/aws-certified-cloud-practitioner (1).png" alt="AWS Certification Badge" class="aws_badge" style="width: 6rem;">
+            </a>
+          </li>        
+        </ul>
       </div>
+    </header>
+
+    <!-- Image Section -->
+    <div class="d-none d-md-flex d-lg-flex justify-content-center col-md-7 col-lg-5 mt-lg-4 text-center offset-md-2 offset-lg-0" style="height: auto;">
+      <img src="picture/Website_Justin-Headshot.png" alt="Justin Morgan Headshot" class="img-fluid custom-img">
     </div>
-      <div class="d-none d-md-flex d-lg-flex justify-content-center col-md-7 col-lg-5 mt-lg-4 text-center offset-md-2 offset-lg-0" style="height: auto;">
-          <img src="picture/Website_Justin-Headshot.png" alt="A beautiful picture of Me" class="img-fluid custom-img">
-      </div>
   </div>
-</div>
+</section>
 
 <!--About Me Section-->
 <section id="aboutMe">
   <div class="container-fluid custom-mt">
     <div class="row">
       <div class="col-lg-8 col-md-10 col-sm-10 mx-auto text-center" style="padding-left: 0;">
-        <p class="colored-words text-lg-center text-sm-left text-xs-left" style="font-size: clamp(1.3rem, 2vw, 1.2rem);">
-          <span class="colored-word text-center" style="font-size:4vh;">About Me</span>
+        <p class="colored-words text-lg-center text-sm-left text-xs-left">
+          <span class="colored-word text-center global_Header_size">About Me</span>
           <br><br>
-          <small>
-            Hello, I'm Justin Morgan, a computer science major and staistics minor at the University of Central Arkansas. As a Database and Integrations Engineer Intern at Acxiom LLC, I am deeply engaged in designing and maintaining internal database systems. My role extends to leveraging cutting-edge IPaaS systems, utilizing third-party APIs, and authentication techniques, including OAuth and API keys. This work reflects my deep passion for technology and my knack for problem-solving.<br><br><br>
-            I'm motivated by constant self-improvement in computer science and staying updated with the latest technology trends. I value collaboration and communication, believing that these are essential for success. My aim is to create groundbreaking solutions that enhance people's well-being and contribute to a better world. I'm excited about the limitless potential of technology and am dedicated to making a significant impact in the industry.
+          <small class="aboutMeTxt">
+            Hello, I'm Justin Morgan, a student at the University of Central
+            Arkansas majoring in computer science. Currently, I am a Database
+            and Integrations Engineer Intern at a Fortune 500 company, where I
+            design and maintain both on-premises and cloud-based database
+            systems. My role includes utilizing AWS, Python, Lambda, and IPaaS
+            systems for API calls, data management, and data manipulation, among
+            other tasks. Additionally, I am AWS certified, which enhances my
+            ability to leverage cloud technologies to create efficient and
+            scalable solutions.<br><br>
+            I'm motivated by constant self-improvement in computer science and
+            staying updated with the latest technology trends. I have a strong
+            passion for artificial intelligence and Python, frequently exploring
+            new developments and applications in these fields. I value
+            collaboration and communication, believing these are essential for
+            success. My aim is to help create groundbreaking solutions that
+            enhance people's well-being and contribute to a better world. I'm
+            excited about the limitless potential of technology and am dedicated
+            to making a significant impact in the industry.
           </small>
         </p>
       </div>
@@ -87,19 +118,19 @@
 <!--Projects Page-->
 <section id="portfolio">
   <div class="container mt-5 pt-5">
-    <div class="colored-word text-center mt-sm-5 pt-sm-5" style="font-size:4vh; margin-top: 4vh;">
-      <p>My Portfolio</p>
+    <div class="colored-word text-center mt-sm-5 pt-sm-5" style="margin-top: 4vh;">
+      <p class="global_Header_size">My Portfolio</p>
     </div>
     <div class="row pt-3">
       <div class="col-sm-8 col-md-6 col-lg-4 mx-auto">
         <div class="card" data-tilt>
           <div class="calc-wrapper">
-            <img src="picture/—Pngtree—calculator digital calculator illustration_4507357.png" alt="Calculator Image">
+            <img src="picture/Calculator.png" alt="Calculator Image">
           </div>
           <div class="content">
             <h3>Algebra Calculator</h3>
             <p>Algebra calculator adept at deciphering mathematical equations, leveraging binary tree algorithms and a token mechanism.</p>
-            <a href="https://github.com/ItzClamy/Calculator" target="_blank">Read More</a>
+            <a href="https://github.com/JustinMCode/AlgebraCalculator" target="_blank">Read More</a>
           </div>
         </div>
       </div>
@@ -111,7 +142,19 @@
           <div class="content">
             <h3>CNN Image Classification</h3>
             <p>A deep learning model using a CNN neural network implemented using PyTorch for image classification.</p>
-            <a href="https://github.com/ItzClamy/PyTorch-Image-Classifier" target="_blank"> Read More</a>
+            <a href="https://github.com/JustinMCode/PyTorch-Image-Classifier" target="_blank"> Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8 col-md-6 col-lg-4 mx-auto">
+        <div class="card" data-tilt>
+          <div class="brooke-wrapper">
+            <img src="picture/HomePageWebsite.png" alt="Calculator Image">
+          </div>
+          <div class="content">
+            <h3>The BrookeShelf</h3>
+            <p>A full-stack book management app using Vite, React, and TypeScript, hosted on AWS. The backend employs MySQL and Lambda Functions.</p>
+            <a href="https://github.com/JustinMCode/The-Brookeshelf" target="_blank">Read More</a>
           </div>
         </div>
       </div>
@@ -122,63 +165,63 @@
 
 <!--Skills & Experience-->
 <section id="Skills-and-Experience">
-<div class="container mt-5 pt-5">
-  <div class="colored-word mt-sm-5 pt-sm-5" style="font-size:4vh; margin-top: 4vh;">
-    <p>Skills & Experience</p>
-    <div class="colored-wording" style="font-size: 2.5vh;"> 
-      <p><small>
-        My exposure to a variety of programming languages<br>has enabled me to cultivate a multifaceted<br>understanding of software development<br>principles and best practices. 
-      </small></p>
+  <div class="container mt-5 pt-5">
+    <div class=" mt-sm-5 pt-sm-5" style="margin-top: 4vh;">
+      <p class="colored-word global_Header_size">Skills & Experience</p>
+      <div class="colored-wording" style="font-size: 2.5vh;"> 
+        <p style="color:#8f9bb7"><small>
+          My exposure to a variety of programming languages<br>has enabled me to cultivate a multifaceted<br>understanding of software development<br>principles and best practices. 
+        </small></p>
+      </div>
     </div>
-  </div>
   <div class="row">
     <div class="progress-bar my-progress-bar d-flex flex-column col-lg-4 text-start">
       <div class="skill-box">
-        <span class="title ">HTML</span>
+        <span class="title" style="color:#8f9bb7">C++</span>
         <div class="skill-bar">
           <span class="skill-per"></span>
         </div>
       </div>
       <div class="skill-box">
-        <span class="title ">CSS & Bootstrap</span>
+        <span class="title" style="color:#8f9bb7">Python</span>
         <div class="skill-bar">
           <span class="skill-per"></span>
         </div>
       </div>
       <div class="skill-box">
-        <span class="title ">JavaScript</span>
+        <span class="title" style="color:#8f9bb7">MySQL and PostgreSQL</span>
         <div class="skill-bar">
           <span class="skill-per"></span>
         </div>
       </div>
       <div class="skill-box">
-        <span class="title ">C++</span>
+        <span class="title" style="color:#8f9bb7">AWS</span>
         <div class="skill-bar">
           <span class="skill-per"></span>
         </div>
       </div>
       <div class="skill-box">
-        <span class="title ">MySQL</span>
+        <span class="title" style="color:#8f9bb7">APIs</span>
         <div class="skill-bar">
           <span class="skill-per"></span>
         </div>
       </div>
     </div>
-    <div class="computerNerd col-md-12 col-lg-8 text-center" style="height:50vh;">
+    <div class="computerNerd d-none d-lg-block col-md-12 col-lg-8 text-center" style="height:50vh;">
       <div id="circle-container">
-          <div class="text-item" id="mysql">MySQL</div>
-          <div class="text-item" id="css">CSS</div>
-          <div class="text-item" id="bootstrap">Bootstrap</div>
-          <div class="text-item" id="c-plus-plus">C++</div>
-          <div class="text-item" id="html">HTML</div>
-          <div class="text-item" id="javascript">JavaScript</div>
-          <img src="picture/CompNerd.png" alt="a computer nerd" class="img-fluid" style="min-width: 100%;">
-        </div>
-    </div>
+        <div class="text-item" id="mysql">MySQL</div>
+        <div class="text-item" id="css">AWS</div>
+        <div class="text-item" id="bootstrap">Python</div>
+        <div class="text-item" id="c-plus-plus">C++</div>
+        <div class="text-item" id="html">Lambda</div>
+        <div class="text-item" id="javascript">PostgreSQL</div>
+        <img src="picture/CompNerd.png" alt="a computer nerd" class="img-fluid" style="min-width: 100%;">
+      </div>
+    </div>    
   </div>
-
-<div class="row experence-custom-bottom">
-    <div class="col-lg-1 col-md-1 col-sm-12 mt-5" style="height:auto;">
+  <div class="row experence-custom-bottom">
+    <!-- Interpublic Group Section -->
+    <div class="col-lg-1 col-md-2 col-sm-12 mt-5" style="height:auto;">
       <div class="expContaier">
         <div class="expCircle">
           <img class="expImg" src="picture/ExpPic.png" alt="cool photo" width="50" height="50">
@@ -186,110 +229,133 @@
         <div class="verticalLine"></div>
       </div>
     </div>
-    <div class="col-lg-11 col-md-11 col-sm-12 mt-5 pt-4 ">
+    <div class="col-lg-11 col-md-10 col-sm-12 mt-5 pt-4">
       <div class="expContainer">
         <div class="expBackground">
-            <div class="naming">University of Central Arkansas <span class="date">August 2021 - Present</span></div>
-            <div class="role">Computer Science</div>
-
-            <div class="experiences"> 
-              <ul>
-                <li>Covered core concepts in C++ such as data types, variables, operators, control structures, 
-                  and functions, as well as more advanced topics like object-oriented programming, classes, 
-                  inheritance, polymorphism, and templates.</li>
-                <li>Studied data structures including advanced data structures, their implementation, and appropriate use cases. Also gained an 
-                  understanding of associated algorithms, their time and space complexity.
-                  This allowed me to form the foundation for efficient and maintainable software development and essential problem-solivng skills.</li>
-              </ul>
-            </div>
-
-            <div class="skillsUsedMedia">
-              <div class="skillUsed skillUsed-first">C++</div>
-              <div class="skillUsed">Data Structures</div>
-              <div class="skillUsed">Algorithms</div>
-              <div class="skillUsed">GitHub</div>
-            </div>
-        </div>
-      </div>
-    </div>
-
-   <div class="exp-two col-lg-1 col-md-1 col-sm-12 " style="height:auto;">
-      <div class="expContaier">
-        <div class="expCircle"></div>
-          <img class="expImg" src="picture/ExpPic.png" alt="cool photo" width="50" height="50">
-        </div> 
-    </div>
-    <div class="col-lg-11 col-md-11 col-sm-12 mt-xl-4 mt-lg-4 mt-md-4 pt-md-2 mt-sm-5 pt-sm-2 mt-5 pt-2">
-      <div class="expContainer">
-        <div class="expBackground">
-            <div class="naming">Acxiom LLC <span class="date">January 2022 - Present</span></div>
-            <div class="role">Data Engineer Intern</div>
-
-            <div class="experiences"> 
-              <ul>
-               <!-- <li>Played a helpful role in facilitating the migration of our legacy database infrastructure to a modern, scalable cloud-based solution. Optimizing performance, 
-                  improving security, and providing better access for our team, leading to increased efficiency and cost savings for the company.</li> -->
-                <!--<li>Observed the migration of the company's legacy database infrastructure to a modern, scalable cloud-based solution</li> -->
-                <li>Instrumental in optimizing SQL queries and views, resulting in enhanced database performance and efficiency.</li>
-                <li>Immersed in acquiring a profound knowledge of SQL, honing my skills in effectively handling, analyzing, and managing intricate data sets within relational databases.</li>
-                <li>Supported team members by researching best practices, providing insights, and assisting in the implementation of modern database technologies.</li>
-                <li>Understanding of third-party APIs and authentication techniques, including OAuth and API keys, complemented by a decent understanding in RESTful and SOAP service methodolgies</li>
-                <li>More To Come!!!</li>
-              </ul>
-            </div>
-
-            <span class="skillUsed skillUsed-first">MySQL</span>
-            <span class="skillUsed">Agile Practices</span>
-            <span class="skillUsed">ServiceNow</span>
-          <span class="skillUsed">SnapLogic</span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</section>
-
-<div class="container-fluid cs-footborder mt-5" style="height: auto;">
-  <div class="row">
-    <div class="col-lg-2 col-md-1 col-sm-1 offset-lg-1 offset-md-0 offset-sm-0 " style="height: auto; position: relative;">
-      <img class="swigglyLine " src="picture/footerStars.png" alt="swigglyLine">
-      </div>
-    <div class="col-lg-3 d-none d-lg-block " style="height: auto; position: relative;">
-      <div class="footerCircle ">
-        <img class="img-fluid footer-img" src="picture/FooterJustinPhoto.png" style="height:95%">
-      </div> 
-      <div class="footerName ">Justin Morgan
-         <div class="footerRole">Software Engineer</div>
-      </div>
-      <div class="footerEmail ">Email: 
-        <div class="footerEmailName ">justincodeemail@gmail.com</div>
-      </div>
-    </div>
-
-    <div class="col-lg-6 col-md-10 offset-md-0 offset-lg-0 offset-sm-0 col-sm-11 col-9 offset-2 ">
-        <div class="footerText ">Let's make <br>something together!
-          <div class="footerlmText ">I am eager to explore potential collaborations and am always <span class="mediaQueryFooter">on the lookout for new and exciting opportunities to grow and innovate. </span></div>
-          <button class="footerButton">
-            <a href="mailto:justincodeemail@gmail.com">Let's Talk</a>
-          </button>
-        </div>
-          <div class="footerFollowMe "> Follow me:
-              <button class="image-button">
-                <a href="https://github.com/ItzClamy" target="_blank">
-                  <img src="picture/GitHub.png" width="50">
-                </a>
-              </button>
-              <button class="image-button">
-                <a href="https://www.linkedin.com/in/justin-morgan-547b23212/" target="_blank">
-                  <img src="picture/LinkedIn.png" width="46" style="margin-top:-10%; margin-left: -50%;">
-                </a>
-              </button>
+          <div class="naming">The Interpublic Group of Companies<span class="date">July 2024 - Current</span></div>
+          <div class="role">Database & Integrations Engineer Intern</div>
+          <div class="experiences"> 
+            <ul>
+              <li>Developed and optimized Python and Lambda code using Boto3, enabling dynamic query execution and automation of data processing tasks, resulting in streamlined data management and efficient report generation.</li>
+              <li>Created and maintained technical and business SQL rules within AWS Athena, validating and transforming incoming data to ensure accuracy and consistency for reporting purposes.</li>
+              <li>Collaborated in the development of a company-wide AWS project which utilized Python, Lambda, S3, and Athena to automate DataZone and Redshift population, enabling stakeholders and business owners to access real-time data for critical reporting processes.</li>
+            </ul>
+          </div>
+          <div class="skillsUsedMedia">
+            <div class="skillUsed skillUsed-first">MySQL</div>
+            <div class="skillUsed">AWS</div>
+            <div class="skillUsed">Python</div>
+            <div class="skillUsed">Lambda</div>
           </div>
         </div>
+      </div>
+    </div>
+  
+    <!-- Acxiom Section -->
+    <div class="col-lg-1 col-md-2 col-sm-12 mt-3" style="height:auto;">
+      <div class="expContaier">
+        <div class="expCircle"></div>
+        <img class="expImg" src="picture/ExpPic.png" alt="cool photo" width="50" height="50">
+        <div class="verticalLine"></div>
+      </div>
+    </div>
+    <div class="col-lg-11 col-md-10 col-sm-12 mt-xl-4 mt-lg-4 mt-md-4 pt-md-2 mt-sm-5 pt-sm-4 mt-5 pt-2">
+      <div class="expContainer">
+        <div class="expBackground">
+          <div class="naming">Acxiom LLC <span class="date">January 2022 - July 2024</span></div>
+          <div class="role">Database & Integrations Engineer Intern</div>
+          <div class="experiences"> 
+            <ul>
+              <li>Leveraged an IPaaS system for building and managing data pipelines which ensured seamless integration between cloud and on-premises environments, thereby optimizing data flow across the organization.</li>
+              <li>Developed and maintained complex SQL queries and stored procedures to support data extraction, transformation, and reporting needs, significantly reducing processing time.</li>
+              <li>Collaborated with cross-functional teams in Agile environments, participating in sprint planning, stand-ups, and retrospectives to ensure timely delivery of database solutions aligned with business goals.</li>
+            </ul>
+          </div>
+          <div class="skillsUsedMedia">
+            <div class="skillUsed skillUsed-first">MySQL</div>
+            <div class="skillUsed">Agile Practices</div>
+            <div class="skillUsed">ServiceNow</div>
+            <div class="skillUsed">SnapLogic</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- University Section -->
+    <div class="col-lg-1 col-md-2 col-sm-12 mt-3" style="height:auto;">
+      <div class="expContaier">
+        <div class="expCircle"></div>
+        <img class="expImg" src="picture/ExpPic.png" alt="cool photo" width="50" height="50">
+      </div> 
+    </div>
+    <div class="col-lg-11 col-md-10 col-sm-12 mt-xl-4 mt-lg-4 mt-md-4 pt-md-2 mt-sm-5 pt-sm-4 pt-2">
+      <div class="expContainer">
+        <div class="expBackground">
+          <div class="naming">The University of Central Arkansas<span class="date">August 2022 - Current</span></div>
+          <div class="role">Computer Science Major</div>
+          <div class="experiences"> 
+            <ul>
+              <li>Covered core OOP concepts such as data types, control structures, inheritance, polymorphism, rvalue references, templates, and more.</li>
+              <li>Learned a range of different data structures, from fundamental to advanced, with emphasis on their implementation and optimal use cases. Additionally, developed a strong grasp of algorithms, focusing on time and space complexity.</li>
+              <li>Engaged in collaborative software development projects, applying version control practices using Git and GitHub, and followed software development methodologies.</li>
+            </ul>
+          </div>
+          <div class="skillsUsedMedia">
+            <div class="skillUsed skillUsed-first">C++</div>
+            <div class="skillUsed">Github</div>
+            <div class="skillUsed">Python</div>
+            <div class="skillUsed">AI</div>
+            <div class="skillUsed">Data Structures</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container-fluid cs-footborder mt-5" style="height: auto;">
+    <div class="row">
+      <div class="col-lg-2 col-md-1 col-sm-1 offset-lg-1 offset-md-0 offset-sm-0 " style="height: auto; position: relative;">
+        </div>
+      <div class="col-lg-3 d-none d-lg-block " style="height: auto; position: relative;">
+        <div class="footerCircle ">
+          <img class="img-fluid footer-img" src="picture/FooterJustinPhoto.png" style="height:95%">
+        </div> 
+        <div class="footerName ">Justin Morgan
+          <div class="footerRole">Software Engineer</div>
+        </div>
+        <div class="footerEmail ">Email: 
+          <div class="footerEmailName ">justincodeemail@gmail.com</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-10 offset-md-0 offset-lg-0 offset-sm-0 col-sm-11 col-9 offset-2 ">
+          <div class="footerText ">Let's make something together!
+            <div class="footerlmText ">I am eager to explore potential collaborations and am always <span class="mediaQueryFooter">on the lookout for new and exciting opportunities to grow and innovate. </span></div>
+            <button class="footerButton">
+              <a href="mailto:justincodeemail@gmail.com">Let's Talk</a>
+            </button>
+          </div>
+            <div class="footerFollowMe "> Follow me:
+                <button class="image-button">
+                  <a href="https://github.com/ItzClamy" target="_blank">
+                    <img src="picture/GitHub.png" width="50">
+                  </a>
+                </button>
+                <button class="image-button">
+                  <a href="https://www.linkedin.com/in/justin-morgan-547b23212/" target="_blank">
+                    <img src="picture/LinkedIn.png" width="46" style="margin-top:-10%; margin-left: -50%;">
+                  </a>
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
     
 <!-- Connects the javascript-->

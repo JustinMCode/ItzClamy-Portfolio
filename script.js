@@ -1,12 +1,11 @@
-
 const speed = 0.01;
 const textItems = [
-  {id: "mysql", angle: 0 },
+  { id: "mysql", angle: 0 },
   { id: "css", angle: (Math.PI * 2) / 6 },
-  { id: "bootstrap", angle: (Math.PI * 2) / 6 * 2 },
-  { id: "c-plus-plus", angle: (Math.PI * 2) / 6 * 3 },
-  { id: "html", angle: (Math.PI * 2) / 6 * 4 },
-  { id: "javascript", angle: (Math.PI * 2) / 6 * 5 },
+  { id: "bootstrap", angle: ((Math.PI * 2) / 6) * 2 },
+  { id: "c-plus-plus", angle: ((Math.PI * 2) / 6) * 3 },
+  { id: "html", angle: ((Math.PI * 2) / 6) * 4 },
+  { id: "javascript", angle: ((Math.PI * 2) / 6) * 5 },
 ];
 
 const circleContainer = document.getElementById("circle-container");

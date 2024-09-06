@@ -10,128 +10,157 @@
 
   */
 
-/*Changes the background color of the entire website*/
+/* Apply Montserrat font globally */
+body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Global Header sizes */ 
+.global_Header_size {
+  font-size: clamp(2rem, 2vw, 3rem);
+}
+/* Custom background color for navbar */
 .bg-custom {
   background-color: #060b27;
-  height: auto;
-  position: relative;
 }
 
-#aboutMe:target:before {
-  content: "";
-  display: block;
-  height: 50px; 
-  margin: -50px 0 0; 
-}
-
-/*Changes the color of the text in navbar*/
+/* Navbar link colors */
 .navbar-nav .nav-link {
-    color: #8f9bb7;
+  color: #8f9bb7;
 }
 
-/*This changes the text of Nav bar to the color #00d7ca when hovered over*/
 .navbar-nav .nav-link:hover {
-    color: #00d7ca;
+  color: #00d7ca;
 }
 
-/*End of the Lets_Talk button in the nav bar*/
+/* Adjust the margin and padding for smaller screens */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    padding: 10px; 
+    font-size: 1.2rem; 
+  }
+}
 
-/*Start of Header*/
+/* Fine-tune navbar toggler button */
+.navbar-toggler {
+  border-color: #8f9bb7;
+}
+
+.navbar-toggler-icon {
+  background-color: #8f9bb7; 
+}
+
+/*End of the nav bar*/
+
+/* Start of the header */
 .first-page-text {
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 
 .colored-sentence {
-  line-height: 1.5;
   color: white;
-  letter-spacing: .2vh;
-  font-size: 3vw;
+  letter-spacing: 0.1vh;
+  font-size: clamp(2rem, 3vw, 5rem);
 }
 
 .colored-word {
   color: #00d7ca;
 }
-
-.colored-words {
-  color: #8f9bb7;
-  font-size: 1.8vh;
+/* Default, no break */
+.breakpoint-br {
+  display: none;
 }
 
-.colored-wording {
+/* Break after Justin Morgan for smaller screens */
+@media (max-width: 768px) {
+  .breakpoint-br {
+    display: inline;
+  }
+}
+.colored-words {
   color: #8f9bb7;
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
 }
 
 .Lets_talk_main {
   list-style: none;
+  padding: 0;
+  margin: 0; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.Lets_talk_main li {
+  margin: 0;
 }
 
 .Lets_talk_main .button {
   background-color: #1f0078;
-  margin-left: 0;
   text-decoration: none;
-  padding: .9vh 2.5vh;
-  font-size: 2vh;
+  padding: .3vh 2.5vh; 
+  font-size: 1rem; 
   border-radius: 1vh;
   color: white;
-}
-
-.Lets_talk_main .button:hover {
-  color: #00d7ca;
-}
-
-.go_To_Projects_botton {
-  list-style: none;
+  border: 0.2vh solid transparent;
+  transition: all 0.3s ease; 
 }
 
 .Lets_talk_main .PgButton {
-  background-clip: padding-box;
-  margin-left: 2vh;
-  margin-top: 20vh;
+  background-color: transparent;
   text-decoration: none;
-  padding: .7vh 2.5vh;
-  font-size: 2vh;
-  border-radius: 2vh;
-  border: .2vh solid white;
+  padding: .3vh 2.5vh; 
+  font-size: 1rem; 
+  border-radius: 1vh;
   color: white;
+  border: 0.2vh solid white;
+  transition: all 0.3s ease; 
 }
 
+.Lets_talk_main .button:hover,
+.Lets_talk_main .PgButton:hover {
+  color: #00d7ca;
+}
 
-@media (min-width: 992px) {
-  .custom-container-pgOne {
-    max-width: 100%;
-    padding-right: 0;
-    padding-left: 0;
+/* Default for large screens */
+.aws_badge {
+  margin-top: -2rem;
+}
+
+/* For medium screens */
+@media (max-width: 1200px) {
+  .aws_badge {
+    margin-top: 0rem;
   }
 }
 
-.custom-img {
-  max-width: 40vw;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjust buttons for smaller screens */
+  .Lets_talk_main .button,
+  .Lets_talk_main .PgButton {
+    width: 100%; 
+    text-align: center;
+    padding: .2vh 1vw; 
+  }
 }
 
-.Lets_talk_main .button:hover {
-  color: #00d7ca;
+@media (max-width: 576px) {
+  /* Extra adjustments for very small screens */
+  .Lets_talk_main .button,
+  .Lets_talk_main .PgButton {
+    padding: .2vh 2vw; 
+    font-size: 1.2rem; 
+  }
 }
-
-.go_To_Projects_botton {
-  list-style: none;
-}
-
-.Lets_talk_main .PgButton {
-  background-clip: padding-box;
-  text-decoration: none;
-  padding: .7vh 2.5vh;
-  font-size: 2vh;
-  border-radius: .6vh;
-  border: .2vh solid white;
-  color: white;
-}
-
-/*End of Header*/
 
 /*About Me*/
-
 .custom-mt {
   margin-top: 5rem; /* Default value for small screens */
+}
+
+.aboutMeTxt {
+  font-size: clamp(1.2rem, 1.2vw, 1.5rem);
 }
 
 /* For screens larger than 992px */
@@ -145,8 +174,6 @@
     margin-top: 13rem;
   }
 }
-
-
 /*End of About Me*/
 
 /*Start of the project cards*/
@@ -206,6 +233,15 @@
   opacity: .15; 
 }
 
+.container .card .brooke-wrapper img {
+  width: 100%; 
+  height: 100%;
+  position:absolute; 
+  margin-left: 0%;
+  opacity: 1; 
+  opacity: .15; 
+}
+
 .container .card .content {
   position: absolute;
   top: 0;
@@ -222,13 +258,13 @@
 }
 
 .container .card .content h3 {
-  font-size: 1.8em; 
+  font-size: 1.8rem; 
   color: #fff; 
   z-index: 1; 
 }
 
 .container .card .content p {
-  font-size: 1em; 
+  font-size: 1.2rem; 
   color: #fff; 
   font-weight: 300; 
 }
@@ -252,84 +288,98 @@
 }
 /*End of Projects*/
 
-/*Start of the progression bars and moving nerd*/
+/* Start of the Progress Bars */
 .progress-bar {
-  position: relative; 
-  width: 100%; 
-  background: #fff; 
-  padding: 1.6vh 3.2vh; 
-  border-radius: 2vh; 
+  position: relative;
+  width: 100%; /* Ensure the progress bar takes up 100% width of its container */
+  background: #fff;
+  padding: 1.6vh 3.2vh;
+  border-radius: 2vh;
 }
 
-.progress-bar .skill-box{
-  width: 100%; 
-  margin: 1.7vh 0;
+/* Skill Box */
+.progress-bar .skill-box {
+  width: 100%;
+  margin: 1.5vh 0; /* Adjusted for better responsiveness */
 }
 
+/* Skill Title */
 .skill-box .title {
-  font-size: 2.5vh; 
+  font-size: clamp(1.5rem, 2.5vw, 2.5vh); /* Responsive font size */
   font-weight: 600;
-  color: white; 
+  color: white;
 }
+
+/* Skill Bar */
 .skill-box .skill-bar {
-  height: 2vh; 
-  width: 100%; 
-  border-radius: 2vh;  
-  background: rgba(22, 33, 61); 
+  height: 2vh;
+  width: 100%;
+  border-radius: 2vh;
+  background: rgba(22, 33, 61);
 }
 
-.my-progress-bar .skill-box:nth-child(1) .skill-per {
-  position: relative; 
-  display: block; 
-  height: 100%; 
-  width: 80%;
-  border-radius: .9vh; 
+/* Progress Bars for Different Skills */
+.my-progress-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 0.9vh;
   background-image: linear-gradient(to right, #01d5c9, #1f0279);
+  transition: width 0.3s ease;
 }
 
-.my-progress-bar .skill-box:nth-child(2) .skill-per {
-  position: relative; 
-  display: block; 
-  height: 100%; 
-  width: 85%;
-  border-radius: .9vh; 
-  background-image: linear-gradient(to right, #01d5c9, #1f0279);
+.my-progress-bar .skill-box:nth-child(1) .skill-per { width: 70%; }
+.my-progress-bar .skill-box:nth-child(2) .skill-per { width: 94%; }
+.my-progress-bar .skill-box:nth-child(3) .skill-per { width: 84%; }
+.my-progress-bar .skill-box:nth-child(4) .skill-per { width: 92%; }
+.my-progress-bar .skill-box:nth-child(5) .skill-per { width: 94%; }
+.my-progress-bar .skill-box:nth-child(6) .skill-per { width: 78%; }
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .progress-bar {
+    padding: 1.2vh 2vh; 
+  }
+
+  .skill-box .title {
+    font-size: clamp(1.2rem, 2vw, 2.2vh); 
+  }
+
+  .my-progress-bar .skill-box {
+    margin: 1.2vh 0; 
+  }
+
+  .skill-box .skill-bar {
+    height: 1.8vh; 
+  }
 }
 
-.my-progress-bar .skill-box:nth-child(3) .skill-per {
-  position: relative; 
-  display: block; 
-  height: 100%; 
-  width: 60%;
-  border-radius: .9vh; 
-  background-image: linear-gradient(to right, #01d5c9, #1f0279);
+@media (max-width: 768px) {
+  .progress-bar {
+    padding: 1vh 1.5vh;
+  }
+
+  .skill-box .title {
+    font-size: clamp(1rem, 1.8vw, 1.8vh); 
+  }
+
+  .skill-box .skill-bar {
+    height: 1.5vh; 
+  }
 }
 
-.my-progress-bar .skill-box:nth-child(4) .skill-per {
-  position: relative; 
-  display: block; 
-  height: 100%; 
-  width: 97%;
-  border-radius: .9vh; 
-  background-image: linear-gradient(to right, #01d5c9, #1f0279);
-}
+@media (min-width: 1200px) {
+  .progress-bar {
+    padding: 2vh 3.2vh; 
+  }
 
-.my-progress-bar .skill-box:nth-child(5) .skill-per {
-  position: relative; 
-  display: block; 
-  height: 100%; 
-  width: 90%;
-  border-radius: .9vh; 
-  background-image: linear-gradient(to right, #01d5c9, #1f0279);
-}
+  .skill-box .title {
+    font-size: clamp(1rem, 3vw, 1.3rem); 
+  }
 
-.my-progress-bar .skill-box:nth-child(6) .skill-per {
-  position: relative; 
-  display: block; 
-  height: 100%; 
-  width: 78%;
-  border-radius: .9vh; 
-  background-image: linear-gradient(to right, #01d5c9, #1f0279);
+  .skill-box .skill-bar {
+    height: 2.2vh; 
+  }
 }
 
 .computerNerd {
@@ -341,6 +391,15 @@
   z-index: 2;
   top: 15%;
   left: 55%;
+}
+
+.text-item {
+  position: absolute;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: bold;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease;
 }
 
 #circle-container {
@@ -361,7 +420,6 @@
   text-align: center;
   transform: translate(-50%, -50%);
 }
-
 
 .expContaier {
   position: relative;
@@ -387,16 +445,26 @@
   width: 4rem;
   height: 4rem;
   margin-left: -2.05rem;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   z-index: 2;
 }
 
-.verticalLine {
+.verticalLine{
   z-index: -1;
   position: relative;
   width: .8rem; 
   height: 90%; 
   top: 19%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: linear-gradient(to bottom, #01d5c9 , #1f0279);
+}
+
+.verticalLineAcxiomtoUCA {
+  z-index: -1;
+  position: relative;
+  width: .8rem; 
+  height: 60%; 
   left: 50%;
   transform: translateX(-50%);
   background-image: linear-gradient(to bottom, #01d5c9 , #1f0279);
@@ -436,10 +504,9 @@
 .naming {
   position: relative;
   color: #01d5c9;
-  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
   font-weight: 400;
   margin-left: 1rem;
-  top: 3vh;
 }
 
 .date {
@@ -454,14 +521,13 @@
   color: white;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   margin-left: 1rem;
-  margin-top: 2rem;
 }
 
 .experiences {
   position: relative;
   color: #8f9bb7;
-  font-size: clamp(.7rem, 2.5vw, 1.3rem);
-  margin-top: 3vh;
+  font-size: 1.3rem;
+  margin-top: .5rem;
 }
 
 .skillUsed-first {
@@ -470,17 +536,19 @@
 
 .skillUsed {
   display: inline-block;
-  margin-top: 1vh;
   margin-bottom: 3vh;
-  font-size: clamp(.8rem, 2vw, 1.3rem);
+  font-size: clamp(1rem, 1vw, 1.3rem);
   font-weight: 400;
-  padding: 0.01rem 1rem;
+  padding: 0.01rem clamp(.7rem, 1vw, 1rem);
   border: 0.2vh solid;
   border-radius: 1vh;
   background-color: #01d5c9;
   text-decoration: none;
   color: #000;
 }
+
+
+/*Start of footer */
 
 .cs-footborder{
   width: 100%;
@@ -544,31 +612,12 @@
 
 .footerText {
   font-size: clamp(1rem, 4vw, 3rem);
-  line-height: 3vw;
-  letter-spacing: .5vh;
-  margin-top: 10%;
-  margin-left: 10vh;
+  margin-top: clamp(2rem, 2vw,3rem);
   color: white;
-}
-
-@media screen and (max-width: 802px) {
-  .footerText {
-    line-height: 3vh;
-  }
-}
-
-@media screen and (min-width: 802px) and (max-width: 1237px) {
-  .footerText {
-    letter-spacing: .5vh;
-    line-height: 4vh;
-  }
 }
 
 .footerlmText {
   font-size: clamp(.01rem, 3vw, 1rem);
-  margin-top: 2vh;
-  letter-spacing:.1vh;
-  line-height: normal;
   color: white;
 }
 
@@ -576,12 +625,9 @@
   background: #1f0078;
   text-decoration: none;
   border-radius: 1vh;
-  border: none;
-  margin-top: 2%; 
-  margin-left: -1%;
+  border: none; 
   font-size: clamp(1rem, 3vw, 1.5rem);
-  padding: .1vh 3vh;
-  padding-top: -5vh;
+  padding: 0vh 1rem;
 }
 .footerButton a {
   text-decoration: none;
@@ -592,18 +638,10 @@
   color: #01d5c9;
 }
 
-.footerArrow {
-  margin-left: .7%;
-  margin-top: 0.39%;
-  position: absolute;
-  min-width: 1px;
-  max-width: 40px;
-}
-
 .footerFollowMe {
   position: relative; 
   margin-left: 50%;
-  margin-top: 5vh;
+  margin-top: 4rem;
   font-size: clamp(.5, 2vw, 1.2rem);
   color: white;
 }
@@ -627,17 +665,7 @@
   }
 }
 
-/*@media screen and (max-width: 1000) {
-
-  .footerText {
-    margin-left: 10vh;
-  }
-}*/
-
 @media screen and (max-width: 575px) {
-  .swigglyLine {
-    display:none;
-  }
   .footerButton{
     margin-top: 10%; 
     margin-left: 20%;
@@ -666,10 +694,6 @@
   .footerFollowMe { 
     margin-left: 22%;
     margin-top: 5vh;
-  }
-
-  .swigglyLine {
-    display:none;
   }
   
   .footerText {
